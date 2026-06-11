@@ -14,6 +14,14 @@ O **Kensei Log Auditor (KLA)** foi concebido como uma ferramenta de linha de com
 O objetivo central da aplicação é atuar na primeira camada de um **SOC (Security Operations Center)**, reduzindo drasticamente o ruído de logs brutos e convertendo strings textuais complexas em relatórios de inteligência contra ameaças acionáveis, contendo o mapeamento de vulnerabilidades, identificação de atacantes e geração de contramedidas em tempo recorde.
 
 ---
+## 1.1 🧪 Prova de Conceito (PoC)
+
+A implementação do KLA foi validada em ambiente controlado, simulando vetores de ataque reais em sistemas Linux. 
+Os detalhes técnicos, métricas de performance e análise dos riscos identificados durante a PoC estão documentados no relatório oficial:
+
+👉 [**Clique aqui para ler o Relatório de Validação Técnica - Kensei Log Auditor (KLA)**](./Relatório%20de%20Validação%20Técnica%20-%20Kensei%20Log%20Auditor%20(KLA).pdf)
+
+---
 
 ## 2. Engenharia de Produção e Arquitetura do Sistema
 
