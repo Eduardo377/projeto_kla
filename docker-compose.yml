@@ -1,0 +1,11 @@
+services:
+  kla-auditor:
+    build: .
+    image: kensei-kla:v1.0
+    container_name: kensei_kla_container
+    volumes:
+      - .:/app
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    # Agora basta passar o nome do arquivo, pois o Entrypoint já chama o python3
+    command: ["fake_auth.log"]
