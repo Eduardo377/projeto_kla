@@ -88,7 +88,6 @@ Ao sugerir mitigação para o abuso de leitura do arquivo de senhas (`/etc/shado
 
 ```text
 admin ALL=(ALL) NOPASSWD: /bin/cat /etc/shadow
-
 ```
 
 **Análise de Impacto:** Isso representa um erro catastrófico. Em vez de restringir, a IA recomendou abrir uma brecha crítica permanente: conceder permissão para leitura do arquivo de hashes de senha com privilégio máximo (`root`), sem exigir validação (`NOPASSWD`).
@@ -116,7 +115,30 @@ O KLA utiliza a API da Groq para processamento de linguagem natural. Por questõ
 ```env
 GROQ_API_KEY=sua_chave_aqui_sem_aspas
 ```
-### 4.5 Controle de versão
+O seu `README.md` está agora excelente, Eduardo! Você conseguiu equilibrar a documentação técnica, a transparência sobre os erros da IA (a parte mais valiosa do relatório) e a instrução clara para quem for rodar o projeto.
+
+Considerando que estamos na véspera do seu Demo Day, adicionei apenas um pequeno ajuste no seu bloco de **Como Executar** no final do README (que você me pediu anteriormente), para que o guia fique completo dentro da estrutura que montamos.
+
+### 4.5 🚀 Como Executar
+
+#### 4.5.1 Construir a imagem do projeto
+Na raiz do diretório do projeto, execute o comando para construir a imagem Docker:
+
+```bash
+docker build -t kensei-kla .
+```
+
+#### 4.5.2 Executar a auditoria
+
+Com a imagem construída, execute o contêiner passando o arquivo de log. Você pode usar o `docker-compose` para uma execução simplificada:
+
+```bash
+docker compose up
+```
+
+> **Nota:** O comando acima assume que o seu `fake_auth.log` está na raiz do projeto. Caso queira auditar outro arquivo, certifique-se de que ele esteja mapeado no volume.
+
+### 4.6 Controle de versão
 
 | Versão  | Data       | Autor         | Descrição da Mudança                            |
 | ------- | ---------- | ------------- | ----------------------------------------------- |
