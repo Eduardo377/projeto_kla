@@ -1,3 +1,10 @@
+# 🛡️ Kensei Log Auditor (KLA)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
+## 📝 Histórico de Versões
+* **v1.0.0 (Versão Atual):** Lançamento da PoC com motor Groq Llama 3.1, arquitetura em containers Docker e automação de triagem de logs.
+* *Próximas evoluções planejadas:* Implementação de Human-in-the-Loop (HITL), integração com SIEM local e suporte a novos formatos de log (JSON/Syslog).
+
 # 🛡️ Relatório de Validação Técnica e Análise de Riscos: Kensei Log Auditor (KLA)
 
 **Programa:** Kensei AI Foundations 2026  
@@ -23,7 +30,7 @@ Os detalhes técnicos, métricas de performance e análise dos riscos identifica
 
 ---
 
-## 2. Engenharia de Produção e Arquitetura do Sistema
+### 2. Engenharia de Produção e Arquitetura do Sistema
 
 O projeto adota uma filosofia de design nativa em nuvem (*cloud-native*) e fortemente isolada, garantindo conformidade com padrões modernos de implantação de software."
 
@@ -99,7 +106,14 @@ A IA não compreendeu que a segurança no Linux baseia-se no **Princípio do Men
 A PoC comprovou que arquiteturas SaaS criam dependência de conectividade WAN. Em ambientes de SOC estritamente isolados (*air-gapped*), a arquitetura precisaria ser adaptada para rodar modelos LLM nativos locais com aceleração de GPU (ex: via Ollama/vLLM).
 
 ---
+### 4.4 Controle de versão
 
+| Versão  | Data       | Autor         | Descrição da Mudança                            |
+| ------- | ---------- | ------------- | ----------------------------------------------- |
+| **1.0** | 11/06/2026 | Eduardo Gomes | Lançamento da PoC: Motor Llama 3.1, Docker, CLI |
+| 0.1     | 01/06/2026 | Eduardo Gomes | MVP interno: Integração básica com Gemini       |
+
+---
 ## 5. Conclusão: O Modelo Ideal de Operação SOC
 
 O **Kensei Log Auditor (KLA)** prova que a Integração de IA reduz o **MTTD (Mean Time to Detect)** automatizando o processamento de logs brutos em tempo real.
