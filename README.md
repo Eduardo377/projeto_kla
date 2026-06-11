@@ -105,8 +105,18 @@ A IA não compreendeu que a segurança no Linux baseia-se no **Princípio do Men
 
 A PoC comprovou que arquiteturas SaaS criam dependência de conectividade WAN. Em ambientes de SOC estritamente isolados (*air-gapped*), a arquitetura precisaria ser adaptada para rodar modelos LLM nativos locais com aceleração de GPU (ex: via Ollama/vLLM).
 
----
-### 4.4 Controle de versão
+### 4.4 ⚙️ Configuração do Ambiente
+
+O KLA utiliza a API da Groq para processamento de linguagem natural. Por questões de segurança, a sua chave de API não deve ser compartilhada.
+
+1. **Obtenha sua chave:** Crie uma conta gratuita em [console.groq.com](https://console.groq.com/) e gere uma nova chave de API.
+2. **Crie o arquivo de variáveis:** Na raiz do projeto, crie um arquivo chamado `.env`.
+3. **Configure sua chave:** Adicione o seguinte conteúdo ao arquivo `.env`:
+
+```env
+GROQ_API_KEY=sua_chave_aqui_sem_aspas
+```
+### 4.5 Controle de versão
 
 | Versão  | Data       | Autor         | Descrição da Mudança                            |
 | ------- | ---------- | ------------- | ----------------------------------------------- |
