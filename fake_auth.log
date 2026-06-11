@@ -1,0 +1,4 @@
+Jun 03 14:22:01 server sshd[1234]: Accepted publickey for admin from 192.168.1.50 port 50123 ssh2
+Jun 03 14:25:10 server sshd[1235]: Failed password for root from 185.220.101.45 port 49122 ssh2
+Jun 03 14:25:12 server sshd[1235]: Failed password for root from 185.220.101.45 port 49122 ssh2
+Jun 03 14:26:00 server sudo[1250]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/cat /etc/shadow
